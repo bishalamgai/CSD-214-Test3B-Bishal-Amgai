@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="417.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csd214test3bbishalamgai.HelloController">
+    <Label contentDisplay="CENTER" text="Pizza Ordering System" />
+    <TextField fx:id="customerNameField" promptText="Customer Name" />
+    <TextField fx:id="mobileNumberField" prefHeight="23.0" prefWidth="558.0" promptText="Mobile Number" />
+    <TextField fx:id="toppingsField" prefHeight="25.0" prefWidth="421.0" promptText="Number of Toppings" />
+    <HBox prefHeight="34.0" prefWidth="558.0" spacing="20.0">
+        <CheckBox text="XL" fx:id="xlCheckBox" />
+        <CheckBox fx:id="lCheckBox" text="L" />
+        <CheckBox fx:id="mCheckBox" text="M" />
+        <CheckBox fx:id="sCheckBox" text="S" />
+    </HBox>
+    <TableView fx:id="tableView" prefHeight="216.0" prefWidth="558.0">
+        <columns>
+         <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="customer" prefWidth="106.6666589975357" text="Customer Name" />
+            <TableColumn fx:id="mobilenumber" prefWidth="103.33333587646484" text="Mobile Number" />
+            <TableColumn fx:id="size" prefWidth="40.6666259765625" text="Size" />
+            <TableColumn fx:id="toppings" prefWidth="82.00007629394531" text="Toppings" />
+            <TableColumn fx:id="totalbills" prefWidth="80.6666259765625" text="Total Bill" />
+        </columns>
+    </TableView>
+    <HBox alignment="TOP_CENTER" prefHeight="15.0" prefWidth="558.0" spacing="20.0">
+        <Button mnemonicParsing="false" onAction="#Insert" text="Insert" />
+        <Button mnemonicParsing="false" onAction="#Update" text="Update" />
+        <Button mnemonicParsing="false" onAction="#Delete" text="Delete" />
+        <Button mnemonicParsing="false" onAction="#Refresh" text="Refresh" />
+    </HBox>
+</VBox>
